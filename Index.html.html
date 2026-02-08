@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Important Question&lt;/title&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #111;
+      color: white;
+      margin-top: 100px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px;
+      position: absolute;
+    }
+
+    #yes {
+      background: #00c853;
+      color: white;
+      left: 40%;
+      top: 60%;
+    }
+
+    #no {
+      background: #d50000;
+      color: white;
+      left: 55%;
+      top: 60%;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Aakriti.&lt;br&gt;&lt;br&gt;
+Be my Valentine?&lt;/h1&gt;
+
+&lt;button id=&quot;yes&quot; onclick=&quot;yesClicked()&quot;&gt;Yes&lt;/button&gt;
+&lt;button id=&quot;no&quot; onmouseover=&quot;moveNo()&quot;&gt;No&lt;/button&gt;
+
+&lt;script&gt;
+  const messages = [
+    &quot;You sure?&quot;,
+    &quot;Think carefully.&quot;,
+    &quot;This button is broken btw.&quot;,
+    &quot;Wrong answer detected.&quot;,
+    &quot;System glitch.&quot;,
+    &quot;Try again.&quot;
+  ];
+
+  let count = 0;
+
+  function moveNo() {
+    const button = document.getElementById(&quot;no&quot;);
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    button.style.left = x + &quot;px&quot;;
+    button.style.top = y + &quot;px&quot;;
+
+    if (count &lt; messages.length) {
+      alert(messages[count]);
+      count++;
+    }
+  }
+
+  function yesClicked() {
+    document.body.innerHTML = `
+      &lt;h1 style=&quot;margin-top:150px;&quot;&gt;
+      Good choice.&lt;br&gt;&lt;br&gt;
+      You just unlocked boyfriend DLC.
+      &lt;/h1&gt;
+    `;
+  }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
